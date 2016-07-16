@@ -15,7 +15,7 @@ public class ExtractorEntryPoint {
 		for(File file3 : files) {
 			if(file3.getName().indexOf(".uc") > 0) {
 				try {
-					//MP3Extractor.extract(file3.toPath(), extractorProcessor);
+					MP3Extractor.extract(file3.toPath(), extractorProcessor);
 				}  
 				catch (Exception e) {
 
