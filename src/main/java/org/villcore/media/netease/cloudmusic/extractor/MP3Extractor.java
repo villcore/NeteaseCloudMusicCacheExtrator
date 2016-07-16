@@ -27,9 +27,12 @@ public class MP3Extractor {
 		}
 
 		if(title == null) {
-			if (mp3file.hasId3v2Tag()) {
+			if (mp3file.hasId3v1Tag()) {
 				ID3v1 id3v1Tag = mp3file.getId3v1Tag();
 				title = id3v1Tag.getTitle();
+			}
+			else {
+				title = srcFile.getName();
 			}
 		}
 		
